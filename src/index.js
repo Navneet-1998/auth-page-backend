@@ -1,13 +1,11 @@
 require('dotenv').config();
 const mongoose = require("mongoose")
-const { connectToMongo } = require('./db.js')
 const express = require('express')
-
 const cors = require('cors'); // Import the cors package
-const mongoURL = process.env.MONGODB_URL;
-
 
 const app = express();
+
+const mongoURL = process.env.MONGODB_URL;
 const port = process.env.PORT
 
 app.use(cors());
